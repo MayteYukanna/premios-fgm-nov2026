@@ -166,7 +166,7 @@
     position: absolute;
     left: 0; right: 0;
     height: 1px;
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.18);
   }
 
   .hero-label {
@@ -273,6 +273,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100%;
   }
 
   .hero-image-placeholder {
@@ -824,9 +825,9 @@
   }
 
   .gala-badge-circle {
-    width: 180px;
-    height: 180px;
-    border: 1px solid rgba(197,34,46,0.3);
+    width: 260px;
+    height: 260px;
+    border: 1.5px solid rgba(197,34,46,0.5);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -845,22 +846,22 @@
 
   .gala-badge-dia {
     font-family: var(--serif);
-    font-size: 52px;
+    font-size: 80px;
     font-weight: 300;
     color: var(--blanco);
     line-height: 1;
   }
 
   .gala-badge-mes {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--rojo);
   }
 
   .gala-badge-year {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 300;
     letter-spacing: 0.15em;
     color: rgba(255,255,255,0.75);
@@ -873,16 +874,16 @@
 
   .gala-badge-venue-name {
     font-family: var(--serif);
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 300;
     color: rgba(255,255,255,0.92);
     letter-spacing: 0.05em;
   }
 
   .gala-badge-venue-sub {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.72);
   }
@@ -1649,7 +1650,7 @@
 
     #hero { grid-template-columns: 1fr; min-height: auto; padding-top: 72px; }
     .hero-left { padding: 56px 28px 48px; }
-    .hero-right { min-height: 340px; }
+    .hero-right { min-height: 70vh; }
     .hero-headline { font-size: clamp(40px, 8vw, 64px); }
     .hero-body { font-size: 16px; max-width: 100%; }
 
@@ -1680,6 +1681,12 @@
 
     .hero-left { padding: 40px 20px 36px; }
     .hero-headline { font-size: clamp(34px, 9vw, 52px); }
+    .gala-badge-circle { width: 280px; height: 280px; }
+    .gala-badge-dia { font-size: 90px; }
+    .gala-badge-mes { font-size: 16px; letter-spacing: 0.25em; }
+    .gala-badge-year { font-size: 12px; }
+    .gala-badge-venue-name { font-size: 36px; }
+    .gala-badge-venue-sub { font-size: 15px; letter-spacing: 0.15em; }
     .hero-body { font-size: 15px; }
     .hero-date-text { font-size: 18px; }
 
@@ -1775,7 +1782,7 @@
     <div class="hero-image-placeholder">
       <div class="hero-fecha-grande" style="font-family:var(--serif);font-size:200px;font-weight:300;color:rgba(255,255,255,0.025);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;letter-spacing:-0.02em;">2026</div>
 
-      <div class="gala-badge" style="position:relative;z-index:1;">
+      <div class="gala-badge" style="position:relative;z-index:1;gap:24px;">
         <div class="gala-badge-circle">
           <div class="gala-badge-dia">22</div>
           <div class="gala-badge-mes">Noviembre</div>
@@ -1787,13 +1794,13 @@
         </div>
 
         <div style="margin-top:24px;text-align:center;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:12px;">Un escenario sin igual</div>
-          <svg width="200" height="20" viewBox="0 0 200 20" fill="none" style="opacity:0.15">
-            <line x1="0" y1="4" x2="200" y2="4" stroke="white" stroke-width="0.5"/>
-            <line x1="0" y1="8" x2="200" y2="8" stroke="white" stroke-width="0.5"/>
-            <line x1="0" y1="12" x2="200" y2="12" stroke="white" stroke-width="0.5"/>
-            <line x1="0" y1="16" x2="200" y2="16" stroke="white" stroke-width="0.5"/>
-            <line x1="0" y1="20" x2="200" y2="20" stroke="white" stroke-width="0.5"/>
+          <div style="font-size:18px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.90);margin-bottom:16px;">Un escenario sin igual</div>
+          <svg width="200" height="20" viewBox="0 0 200 20" fill="none" style="opacity:0.40">
+            <line x1="0" y1="4" x2="200" y2="4" stroke="white" stroke-width="1"/>
+            <line x1="0" y1="8" x2="200" y2="8" stroke="white" stroke-width="1"/>
+            <line x1="0" y1="12" x2="200" y2="12" stroke="white" stroke-width="1"/>
+            <line x1="0" y1="16" x2="200" y2="16" stroke="white" stroke-width="1"/>
+            <line x1="0" y1="20" x2="200" y2="20" stroke="white" stroke-width="1"/>
           </svg>
         </div>
       </div>
