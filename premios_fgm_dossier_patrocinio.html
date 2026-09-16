@@ -667,11 +667,15 @@
 
   .premios-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     background: rgba(255,255,255,0.05);
     position: relative;
     z-index: 1;
+  }
+
+  .adultos-etapas-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .premios-card {
@@ -1692,6 +1696,8 @@
     .premios-grid { grid-template-columns: 1fr 1fr; }
     .premios-card { padding: 40px 28px; }
 
+    .adultos-etapas-grid { grid-template-columns: 1fr; gap: 40px; }
+
     .gala-inner { grid-template-columns: 1fr; }
     .gala-visual { min-height: 300px; }
     .gala-content { padding: 48px 28px; }
@@ -2147,7 +2153,7 @@
       </p>
     </div>
 
-    <div class="premios-grid" style="grid-template-columns:repeat(4,1fr);">
+    <div class="premios-grid">
 
       <!-- 01 Rendimiento excelente -->
       <div class="premios-card reveal reveal-delay-1">
@@ -2215,7 +2221,7 @@
 <!-- ─── 4b. ADULTOS EN ACCIÓN MUSICAL ──────── -->
 <section style="padding:80px 0;background:var(--gris-muy-suave);overflow:hidden;">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <div class="adultos-etapas-grid" style="display:grid;gap:64px;align-items:center;">
 
       <div>
         <div class="section-label reveal">Música en todas las etapas</div>
