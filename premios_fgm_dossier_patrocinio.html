@@ -36,7 +36,7 @@
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    z-index: 100;
+    z-index: 700;
     padding: 0 48px;
     height: 88px;
     display: flex;
@@ -1828,8 +1828,10 @@
       display: flex;
       position: fixed;
       top: 0;
+      left: auto;
       right: 0;
       bottom: 0;
+      height: 100vh;
       width: min(300px, 82vw);
       background: var(--negro);
       z-index: 550;
@@ -1837,7 +1839,11 @@
       justify-content: center;
       align-items: flex-end;
       padding: 80px 36px 56px;
+      margin: 0;
       border-left: 2px solid var(--rojo);
+      border-bottom: none;
+      backdrop-filter: none;
+      overflow-y: auto;
       transform: translateX(100%);
       transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -1935,7 +1941,7 @@
 
 <!-- Panel menú móvil -->
 <div class="nav-overlay" id="navOverlay"></div>
-<nav class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
+<div class="nav-mobile-panel" id="navMobilePanel" role="navigation" aria-label="Menú principal" aria-hidden="true">
   <ul>
     <li><a href="#premios" class="nav-mobile-link">Los Premios</a></li>
     <li><a href="#gala" class="nav-mobile-link">La Gala</a></li>
@@ -1943,7 +1949,7 @@
     <li><a href="#patrocinios" class="nav-mobile-link">Patrocinar</a></li>
     <li><a href="#contacto" class="mobile-cta nav-mobile-link">Unirse</a></li>
   </ul>
-</nav>
+</div>
 
 <!-- ─── 1. HERO ──────────────────────────────── -->
 <section id="hero">
@@ -2736,8 +2742,6 @@
     overlay.classList.toggle('open', open);
     hamburger.setAttribute('aria-expanded', open);
     mobilePanel.setAttribute('aria-hidden', !open);
-    // Elevar el hamburger sobre el overlay cuando está abierto
-    hamburger.style.zIndex = open ? '500' : '';
     document.body.style.overflow = open ? 'hidden' : '';
   }
 
